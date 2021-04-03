@@ -28,6 +28,7 @@
 .container {
 	max-width: 1200px;
 	width: 100%;
+	height: 100%;
 	margin: auto;
 }
 
@@ -47,6 +48,12 @@
 	filter: saturate(0);
 	position: absolute;
 	z-index: 1;
+}
+
+.jumbo-slider__video-player {
+	width: 100%;
+	height: 100vh;
+	transform: scale(1.5);
 }
 
 .jumbo-slider__slide--active .jumbo-slider__slide-bg {
