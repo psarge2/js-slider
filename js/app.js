@@ -50,4 +50,4 @@ let init = () => {
   startSliding();
 }
 
-init();
+//init();
