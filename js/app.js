@@ -30,9 +30,9 @@ let init = () => {
       slides[1].classList.add('jumbo-slider__slide--active')
       slides[0].classList.remove('jumbo-slider__slide--active')
 
-      //clone first slide and place last on the list
+      //clone first slide and place last position on the list
       container.appendChild(slides[0].cloneNode([true]));
-      //remoce the first slide after it is cloned 
+      //remove the first slide after it is cloned 
       container.removeChild(slides[0]);
 
       //console.log(`slides: ${slides.length}`)
@@ -50,4 +50,4 @@ let init = () => {
   startSliding();
 }
 
-//init();
+init();
