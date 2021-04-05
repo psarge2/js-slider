@@ -25,8 +25,15 @@ let init = () => {
     
     setInterval(() => {
       console.log(`current: ${current}`)
+
+      //remove  active class from first slide and add it to second slide
       slides[1].classList.add('jumbo-slider__slide--active')
       slides[0].classList.remove('jumbo-slider__slide--active')
+
+      //clone first slide and place last on the list
+      container.appendChild(slides[0].cloneNode([true]));
+      //remoce the first slide after it is cloned 
+      container.removeChild(slides[0]);
 
       console.log(`slides: ${slides.length}`)
       if(current < slides.length){
@@ -35,9 +42,9 @@ let init = () => {
       } else {
         current = 1
       }
-      container.appendChild(slides[0].cloneNode([true]));
-      container.removeChild(slides[0]);
-    }, 6000);
+      
+    }, time);
+    //could use setTimeout to stop slide show but it will end once user goes to a differnt page or closes window
   }
   startSliding();
 }
