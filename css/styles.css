@@ -178,4 +178,5 @@
 
 .jumbo-slider__slide--active .jumbo-slider__line {
 	width: 100%;
+	background: #03fc7f;
 }
