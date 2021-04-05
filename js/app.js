@@ -13,10 +13,10 @@ let init = () => {
 
   //update elipsis and links
   let updateNav = (current) => {
-    console.log(`update current: ${current}`)
-    for (let index = 0; index < slides.length; index++){
-      links[index].classList.remove('jumbo-slider__link--active');
-      circles[index].classList.remove('jumbo-slider__circle--filled');
+    //console.log(`update current: ${current}`)
+    for (let i = 0; i < slides.length; i++){
+      links[i].classList.remove('jumbo-slider__link--active');
+      circles[i].classList.remove('jumbo-slider__circle--filled');
     }
     links[current-1].classList.add('jumbo-slider__link--active');
     circles[current-1].classList.add('jumbo-slider__circle--filled');
@@ -24,7 +24,7 @@ let init = () => {
   let startSliding = () => {
     
     setInterval(() => {
-      console.log(`current: ${current}`)
+      //console.log(`current: ${current}`)
 
       //remove  active class from first slide and add it to second slide
       slides[1].classList.add('jumbo-slider__slide--active')
@@ -35,12 +35,13 @@ let init = () => {
       //remoce the first slide after it is cloned 
       container.removeChild(slides[0]);
 
-      console.log(`slides: ${slides.length}`)
+      //console.log(`slides: ${slides.length}`)
       if(current < slides.length){
         current++
         updateNav(current)
       } else {
         current = 1
+        updateNav(current);
       }
       
     }, time);
